@@ -170,10 +170,10 @@ jobs:
           labels: |
             "org.opencontainers.image.title": "${{ matrix.image.name }}",
             "org.opencontainers.image.url": "https://ghcr.io/${{ github.repository_owner }}/${{ matrix.image.name }}",
-            "org.opencontainers.image.source": "https://github.com/rtrox/containers",
+            "org.opencontainers.image.source": "https://github.com/${{ github.repository_owner }}/containers",
             "org.opencontainers.image.version": "${{ matrix.image.version }}",
             "org.opencontainers.image.revision": "${{ github.sha }}",
-            "org.opencontainers.image.vendor": "rtrox",
+            "org.opencontainers.image.vendor": "${{ github.repository_owner }}",
 
       - name: Run Goss Tests
         id: dgoss
