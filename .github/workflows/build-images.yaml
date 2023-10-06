@@ -161,7 +161,7 @@ jobs:
           build-args: |-
             VERSION=${{ matrix.image.version }}
             REVISION=${{ github.sha }}
-          context: "." # TODO: Once initial changes are landed, go back and fix Dockerfiles to use relative paths
+          context: ${{ matrix.image.context }}
           platforms: ${{ matrix.image.platform }}
           file: ${{ matrix.image.dockerfile }}
           outputs: ${{ steps.prepare-build-outputs.outputs.outputs }}
