@@ -163,10 +163,10 @@ if __name__ == "__main__":
             meta = None
             if os.path.isfile(os.path.join("./apps", app, "metadata.yaml")):
                 meta = load_metadata_file_yaml(os.path.join("./apps", app, "metadata.yaml"))
-            elif os.path.isfile(os.path.join("./apps", app, "ci", "metadata.json")):
-                meta = load_metadata_file_json(os.path.join("./apps", app, "ci", "metadata.json"))
+            elif os.path.isfile(os.path.join("./apps", app, "metadata.json")):
+                meta = load_metadata_file_json(os.path.join("./apps", app, "metadata.json"))
 
-            imageToBuild = get_image_metadata(os.path.join("./apps", app, "ci"), meta, forRelease, force=force, channels=channels)
+            imageToBuild = get_image_metadata(os.path.join("./apps", app), meta, forRelease, force=force, channels=channels)
             if imageToBuild is not None:
                 imagesToBuild["images"].extend(imageToBuild["images"])
                 imagesToBuild["imagePlatforms"].extend(imageToBuild["imagePlatforms"])
