@@ -3,7 +3,7 @@
   "base": false,
   "channels": [
     {
-      "name": "stable",
+      "name": "stable2",
       "platforms": [
         "linux/amd64",
         "linux/arm64"
