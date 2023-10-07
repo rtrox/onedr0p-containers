@@ -40,7 +40,7 @@ def get_latest_image(name):
     data = r.json()
     for image in data:
         tags = image["metadata"]["container"]["tags"]
-        if "latest" in tags:
+        if "rolling" in tags:
             return image
     print(f"Couldn't find latest tag for {name}")
     return None
