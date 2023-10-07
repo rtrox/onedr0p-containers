@@ -67,13 +67,43 @@ Each Image will be built with a `rolling` tag, along with tags specific to it's 
 
 Container | Channel | Image | Latest Tags
 --- | --- | --- | ---
-{% for image in app_images | sort(attribute="name") -%}
-[{{ image.name }}]({{ image.html_url }}) | {{ image.channel }} | ghcr.io/onedr0p/{{ image.name }} |
-{%- set space = joiner(" ") -%}
-{%- for tag in image.tags -%}
-{{ space() }}![{{ tag }}](https://img.shields.io/badge/{{ tag.replace("-", "--") }}-{% if tag == "latest" %}green{% else %}blue{% endif %}?style=flat-square)
-{%- endfor %}
-{% endfor %}
+[bazarr]() | stable | ghcr.io/onedr0p/bazarr |
+[cni-plugins]() | stable | ghcr.io/onedr0p/cni-plugins |
+[emby]() | stable | ghcr.io/onedr0p/emby |
+[flood]() | stable | ghcr.io/onedr0p/flood |
+[github-actions-runner]() | stable | ghcr.io/onedr0p/github-actions-runner |
+[home-assistant]() | stable | ghcr.io/onedr0p/home-assistant |
+[jbops]() | stable | ghcr.io/onedr0p/jbops |
+[jellyfin]() | stable | ghcr.io/onedr0p/jellyfin |
+[kubernetes-kubectl]() | kubectl | ghcr.io/onedr0p/kubernetes-kubectl |
+[lidarr]() | master | ghcr.io/onedr0p/lidarr |
+[lidarr-develop]() | develop | ghcr.io/onedr0p/lidarr-develop |
+[lidarr-nightly]() | nightly | ghcr.io/onedr0p/lidarr-nightly |
+[lidarr-plugins]() | plugins | ghcr.io/onedr0p/lidarr-plugins |
+[par2cmdline-turbo]() | stable | ghcr.io/onedr0p/par2cmdline-turbo |
+[plex]() | stable | ghcr.io/onedr0p/plex |
+[plex-beta]() | beta | ghcr.io/onedr0p/plex-beta |
+[postgres-init]() | stable | ghcr.io/onedr0p/postgres-init |
+[prowlarr]() | master | ghcr.io/onedr0p/prowlarr |
+[prowlarr-develop]() | develop | ghcr.io/onedr0p/prowlarr-develop |
+[prowlarr-nightly]() | nightly | ghcr.io/onedr0p/prowlarr-nightly |
+[qbittorrent]() | stable | ghcr.io/onedr0p/qbittorrent |
+[qbittorrent-beta]() | beta | ghcr.io/onedr0p/qbittorrent-beta |
+[radarr]() | master | ghcr.io/onedr0p/radarr |
+[radarr-develop]() | develop | ghcr.io/onedr0p/radarr-develop |
+[readarr-develop]() | develop | ghcr.io/onedr0p/readarr-develop |
+[readarr-nightly]() | nightly | ghcr.io/onedr0p/readarr-nightly |
+[rtorrent]() | stable | ghcr.io/onedr0p/rtorrent |
+[sabnzbd]() | stable | ghcr.io/onedr0p/sabnzbd |
+[sonarr]() | main | ghcr.io/onedr0p/sonarr |
+[sonarr-develop]() | develop | ghcr.io/onedr0p/sonarr-develop |
+[tautulli]() | master | ghcr.io/onedr0p/tautulli |
+[theme-park]() | stable | ghcr.io/onedr0p/theme-park |
+[transmission]() | stable | ghcr.io/onedr0p/transmission |
+[tvheadend]() | stable | ghcr.io/onedr0p/tvheadend |
+[udp-broadcast-relay-redux]() | stable | ghcr.io/onedr0p/udp-broadcast-relay-redux |
+[unpackerr]() | stable | ghcr.io/onedr0p/unpackerr |
+
 
 ## Contributing
 
@@ -119,4 +149,3 @@ Containers here can be **deprecated** at any point, this could be for any reason
 ## Credits
 
 A lot of inspiration and ideas are thanks to the hard work of [hotio.dev](https://hotio.dev/) and [linuxserver.io](https://www.linuxserver.io/) contributors.
-
