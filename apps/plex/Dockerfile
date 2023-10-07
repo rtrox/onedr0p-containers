@@ -51,6 +51,6 @@ RUN \
 
 WORKDIR "${PLEX_MEDIA_SERVER_HOME}"
 USER kah
-COPY ./plex-preferences.sh /scripts/plex-preferences.sh
-COPY ./entrypoint.sh /entrypoint.sh
+COPY .apps/plex/plex-preferences.sh /scripts/plex-preferences.sh
+COPY .apps/plex/entrypoint.sh /entrypoint.sh
 CMD ["/entrypoint.sh"]
